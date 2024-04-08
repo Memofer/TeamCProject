@@ -78,8 +78,5 @@ public class enemy_controller : MonoBehaviour
             }
             }
     }
-    public void EnableSword()
-    {
-        sword.SetActive(true);
-    }
+
 }
