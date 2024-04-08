@@ -14,6 +14,7 @@ public class enemy_controller : MonoBehaviour
     [SerializeField] private int moveSpeed = 10;
     [SerializeField] private LayerMask Layermask;
     [SerializeField] private float extraDistance = 1f;
+    private bool interrupted;
     
     void Start()
     {
@@ -27,28 +28,53 @@ public class enemy_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D rayCastHit; 
+        interrupted = false;
+        RaycastHit2D rayCastHit;
+        animator.SetBool("Walking", true);
+        animator.SetBool("Attacking", false);
         if (moveX > 0f)
         {
             eSprite.flipX = false;
-            rayCastHit = Physics2D.Raycast(BoxCollider.bounds.center, Vector2.right, BoxCollider.bounds.extents.x + extraDistance);
+            rayCastHit = Physics2D.Raycast(BoxCollider.bounds.center, Vector2.right, BoxCollider.bounds.extents.x + extraDistance,Layermask);
+            if (rayCastHit)
+            {
+                animator.SetBool("Walking", false);
+                animator.SetBool("Attacking", true);
+                interrupted = true;
+            }
         }
         else
         {
             eSprite .flipX = true;
-            rayCastHit = Physics2D.Raycast(BoxCollider.bounds.center, Vector2.left, BoxCollider.bounds.extents.x + extraDistance);
+            rayCastHit = Physics2D.Raycast(BoxCollider.bounds.center, Vector2.left, BoxCollider.bounds.extents.x + extraDistance,Layermask);
+            if (rayCastHit)
+            {
+                animator.SetBool("Walking", false);
+                animator.SetBool("Attacking", true);
+                interrupted = true;
+            }
         }
-        moveDir = new Vector2 (moveX, moveY).normalized;
+
+        moveDir = new Vector2(moveX, moveY).normalized;
     }
     private void FixedUpdate()
     {
-        rigidBody.velocity = new Vector2(moveDir.x * moveSpeed, rigidBody.velocity.y);
+        if (!interrupted) 
+        { 
+            rigidBody.velocity = new Vector2(moveDir.x * moveSpeed, rigidBody.velocity.y);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "edge")
         {
-
-        }
+            if(moveX > 0f)
+            {
+                moveX = -1f;
+            }else if(moveX <0)
+            {
+                moveX = +1f;
+            }
+            }
     }
 }

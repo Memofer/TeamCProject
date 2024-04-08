@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - platform
+  - edge
   layers:
   - Default
   - TransparentFX
@@ -12,8 +13,8 @@ TagManager:
   - platform
   - Water
   - UI
-  - 
-  - 
+  - edge
+  - Living
   - 
   - 
   - 
