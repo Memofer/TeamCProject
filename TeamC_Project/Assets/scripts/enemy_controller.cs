@@ -15,6 +15,7 @@ public class enemy_controller : MonoBehaviour
     [SerializeField] private LayerMask Layermask;
     [SerializeField] private float extraDistance = 1f;
     private bool interrupted;
+    [SerializeField]private GameObject sword;
     
     void Start()
     {
@@ -76,5 +77,9 @@ public class enemy_controller : MonoBehaviour
                 moveX = +1f;
             }
             }
+    }
+    public void EnableSword()
+    {
+        sword.SetActive(true);
     }
 }

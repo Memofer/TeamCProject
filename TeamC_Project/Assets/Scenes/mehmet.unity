@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 76529233}
   - component: {fileID: 76529236}
   - component: {fileID: 76529235}
+  - component: {fileID: 76529237}
   m_Layer: 7
   m_Name: Capsule
   m_TagString: Player
@@ -281,6 +282,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &76529237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76529232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff1cd085abed5f458b8923d8d875562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhealth: 80
+  maxmana: 0
+  current_health: 80
+  current_mana: 0
 --- !u!1001 &650571069
 PrefabInstance:
   m_ObjectHideFlags: 0
