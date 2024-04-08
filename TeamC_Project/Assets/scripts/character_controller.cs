@@ -5,6 +5,7 @@ using UnityEngine.Timeline;
 
 public class main_character : MonoBehaviour
 {
+    public GameObject sword;
     private bool jumping;
     [SerializeField]float extraheight = +1f;
     [SerializeField]private LayerMask platformlayermask;
@@ -77,5 +78,8 @@ public class main_character : MonoBehaviour
     private void attack_quit()
     {
         animator.SetBool("attacking",false);
+    }
+    private void onsword(){
+        sword.SetActive(true);
     }
 }
