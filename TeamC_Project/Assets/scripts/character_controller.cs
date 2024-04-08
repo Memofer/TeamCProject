@@ -88,4 +88,8 @@ public class main_character : MonoBehaviour
             animator.SetBool("attacking",false);
         }
     }
+    private void offsword()
+    {
+        sword.SetActive(false);
+    }
 }

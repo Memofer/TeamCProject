@@ -594,10 +594,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff1cd085abed5f458b8923d8d875562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhealth: 0
-  maxmana: 0
-  current_health: 0
-  current_mana: 0
+  maxhealth: 100
+  maxmana: 100
+  current_health: 100
+  current_mana: 100
 --- !u!212 &1628358905
 SpriteRenderer:
   m_ObjectHideFlags: 0
