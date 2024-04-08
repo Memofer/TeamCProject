@@ -6,6 +6,8 @@ using UnityEngine.Timeline;
 public class main_character : MonoBehaviour
 {
     private bool jumping;
+    [SerializeField]float extraheight = +1f;
+    [SerializeField]private LayerMask platformlayermask;
     [SerializeField]private float speed;
     [SerializeField]private float jumpforce;
     private Rigidbody2D rigbody;
@@ -25,7 +27,7 @@ public class main_character : MonoBehaviour
     }
     void Update()
     {
-    animator.SetBool("running", false);
+     animator.SetBool("running", false);
      moveX = 0f;
      moveY = 0f;
      if (Input.GetKeyDown(KeyCode.W))
@@ -46,21 +48,25 @@ public class main_character : MonoBehaviour
         moveX=-1f;
         pSprite.flipX=true;
      }
-     if (Input.GetKeyDown(KeyCode.Mouse1))
+     if (Input.GetKeyDown(KeyCode.Mouse0))
      {
         animator.SetBool("attacking",true);
      }
-     movedir = new Vector2(moveX, moveY);
+     movedir = new Vector2(moveX, moveY).normalized;
      animator.SetFloat("moveX", Mathf.Abs(moveX));
      animator.SetFloat("moveY",rigbody.velocity.y);
     }
     private void FixedUpdate() {
-        if (jumping)
+        if (jumping && isgrounde())
         {
             jumping=false;
             rigbody.velocity = new Vector2(rigbody.velocity.x, jumpforce);
         }
         rigbody.velocity = new Vector2(moveX*speed, rigbody.velocity.y);
+    }
+    private bool isgrounde(){
+        RaycastHit2D raycastHit = Physics2D.Raycast(boxCollider.bounds.center, Vector2.down,boxCollider.bounds.extents.x+extraheight,platformlayermask);
+        return raycastHit.collider !=null;
     }
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "platform")

@@ -409,8 +409,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce641e635fc01e14f8264c0d4ed03206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extraheight: 0.5
+  platformlayermask:
+    serializedVersion: 2
+    m_Bits: 8
   speed: 5
-  jumpforce: 10
+  jumpforce: 8.29
 --- !u!1001 &4930220560810889451
 PrefabInstance:
   m_ObjectHideFlags: 0
