@@ -80,7 +80,7 @@ public class main_character : MonoBehaviour
     }
     private void onsword(){
         sword.SetActive(true);
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             animator.SetBool("attacking", true);
         }
