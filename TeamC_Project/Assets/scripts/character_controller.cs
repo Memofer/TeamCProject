@@ -42,16 +42,19 @@ public class main_character : MonoBehaviour
         pSprite.flipX = false;
         moveX=+1f;
         animator.SetBool("running", true);
+        sword.transform.eulerAngles = new Vector3(0f, 0f, 0f);
      }
      if (Input.GetKey(KeyCode.A))
      {
         animator.SetBool("running", true);
         moveX=-1f;
         pSprite.flipX=true;
+        sword.transform.eulerAngles = new Vector3(0, 180f, 0f);
      }
      if (Input.GetKeyDown(KeyCode.Mouse0))
      {
         animator.SetBool("attacking",true);
+        sword.SetActive(true);
      }
      movedir = new Vector2(moveX, moveY).normalized;
      animator.SetFloat("moveX", Mathf.Abs(moveX));
@@ -75,11 +78,14 @@ public class main_character : MonoBehaviour
             animator.SetBool("on_air", false);
         }
     }
-    private void attack_quit()
-    {
-        animator.SetBool("attacking",false);
-    }
     private void onsword(){
         sword.SetActive(true);
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            animator.SetBool("attacking", true);
+        }
+        else{
+            animator.SetBool("attacking",false);
+        }
     }
 }
