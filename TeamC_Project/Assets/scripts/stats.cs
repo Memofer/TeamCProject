@@ -21,6 +21,7 @@ public class stats : MonoBehaviour
         
     }
     public void takedamage(int damage){
-        current_health-=damage;
+        Debug.Log("bruh");
+        current_health= current_health - damage;
     }
 }

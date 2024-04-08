@@ -16,9 +16,10 @@ public class player_sword : MonoBehaviour
     {
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "enemy")
+        if (other.gameObject.tag == "enemy")
         {
-            stats stat =other.GetComponent<stats>();
+            Debug.Log("hallo world");
+            stats stat = other.GetComponent<stats>();
             stat.takedamage(damage*level);
         }
     }
