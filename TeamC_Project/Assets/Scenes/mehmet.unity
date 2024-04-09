@@ -516,7 +516,83 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 187023824455045442, guid: 25deb9b07d59058438b2c2776c49a73a, type: 3}
   m_PrefabInstance: {fileID: 1539105664}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 826150341}
+  - component: {fileID: 826150340}
+  - component: {fileID: 826150339}
+  - component: {fileID: 826150338}
+  - component: {fileID: 826150337}
+  - component: {fileID: 826150336}
+  - component: {fileID: 826150335}
+  m_Layer: 0
+  m_Name: Goblin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &826150335
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826150334}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc2e8a2084774a34ba5f11da69dd9777, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &826150336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826150334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4139e4f3782274e9f64e99cf361678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 0}
+  moveSpeed: 7
+  Layermask:
+    serializedVersion: 2
+    m_Bits: 128
+  extraDistance: 1
+  Weapon: {fileID: 137412491}
+--- !u!114 &826150337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826150334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff1cd085abed5f458b8923d8d875562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhealth: 75
+  maxmana: 0
+  current_health: 75
+  current_mana: 0
+--- !u!50 &826150338
+=======
 --- !u!50 &1539105666
+>>>>>>> parent of 3e88144 (EnerjiToplarıveBitmemisGoblin)
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
