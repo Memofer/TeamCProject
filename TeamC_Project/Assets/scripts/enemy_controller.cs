@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class enemy_controller : MonoBehaviour
@@ -15,7 +16,7 @@ public class enemy_controller : MonoBehaviour
     [SerializeField] private LayerMask Layermask;
     [SerializeField] private float extraDistance = 1f;
     private bool interrupted;
-    [SerializeField]private GameObject sword;
+    public GameObject Weapon;
     
     void Start()
     {
@@ -35,6 +36,8 @@ public class enemy_controller : MonoBehaviour
         animator.SetBool("Attacking", false);
         if (moveX > 0f)
         {
+            Weapon.transform.position = new Vector2(0.22f, 0f);
+            Weapon.transform.rotation = new Quaternion(0f,0f,0f,0f);
             eSprite.flipX = false;
             rayCastHit = Physics2D.Raycast(BoxCollider.bounds.center, Vector2.right, BoxCollider.bounds.extents.x + extraDistance,Layermask);
             if (rayCastHit)
@@ -46,6 +49,8 @@ public class enemy_controller : MonoBehaviour
         }
         else
         {
+            Weapon.transform.position = new Vector2(-0.22f, 0f);
+            Weapon.transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
             eSprite .flipX = true;
             rayCastHit = Physics2D.Raycast(BoxCollider.bounds.center, Vector2.left, BoxCollider.bounds.extents.x + extraDistance,Layermask);
             if (rayCastHit)
@@ -65,18 +70,26 @@ public class enemy_controller : MonoBehaviour
             rigidBody.velocity = new Vector2(moveDir.x * moveSpeed, rigidBody.velocity.y);
         }
     }
+    public void EnableWeapon()
+    {
+        Weapon.SetActive(true);
+        Debug.Log("Working");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "edge")
         {
-            if(moveX > 0f)
+            if (moveX > 0f)
             {
                 moveX = -1f;
-            }else if(moveX <0)
+            }
+            else if (moveX < 0)
             {
                 moveX = +1f;
             }
-            }
+        }
     }
+
+    
 
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6186724643401553982}
   - component: {fileID: 5624566549437489364}
-  - component: {fileID: 6034099290484881281}
+  - component: {fileID: 5643538942052687832}
   m_Layer: 0
   m_Name: SkeletonSword
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9220800651492118104}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0.65682, y: 0.8493261, z: 0.08220403}
   m_LocalScale: {x: 0.32992414, y: 0.3196522, z: 1}
   m_ConstrainProportionsScale: 0
@@ -90,7 +90,7 @@ PolygonCollider2D:
       - {x: 1.4688189, y: -0.0350826}
       - {x: 1.5688949, y: 0.35978526}
   m_UseDelaunayMesh: 0
---- !u!114 &6034099290484881281
+--- !u!114 &5643538942052687832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

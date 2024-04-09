@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6170927638716861863}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.92, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.031, y: 3.1284, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -179,6 +179,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   extraDistance: 1
+  Weapon: {fileID: 9220800651492118104, guid: 1dec3a92942e5d041a41b728fbfa1b62, type: 3}
 --- !u!95 &2098354350000995749
 Animator:
   serializedVersion: 5
