@@ -43,9 +43,9 @@ public class enemy_controller : MonoBehaviour
             rayCastHit = Physics2D.Raycast(BoxCollider.bounds.center, Vector2.right, BoxCollider.bounds.extents.x + extraDistance,Layermask);
             if (rayCastHit)
             {
-                animator.SetBool("Walking", false);
-                animator.SetBool("Attacking", true);
                 interrupted = true;
+                
+                animator.SetBool("Attacking", true);               
                 Weapon.gameObject.SetActive(false);
 
             }
@@ -57,9 +57,9 @@ public class enemy_controller : MonoBehaviour
             rayCastHit = Physics2D.Raycast(BoxCollider.bounds.center, Vector2.left, BoxCollider.bounds.extents.x + extraDistance,Layermask);
             if (rayCastHit)
             {
-                animator.SetBool("Walking", false);
-                animator.SetBool("Attacking", true);
                 interrupted = true;
+                
+                animator.SetBool("Attacking", true);             
                 Weapon.gameObject.SetActive(false);
 
             }
