@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class player_sword : MonoBehaviour
 {
+    [SerializeField]private string et;
     public int damage;
     public int level;
     // Start is called before the first frame update
@@ -17,8 +19,7 @@ public class player_sword : MonoBehaviour
         gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("hallo world");
-        if (other.gameObject.tag == "enemy")
+        if (other.gameObject.tag == et)
         {
             stats stat = other.GetComponent<stats>();
             stat.takedamage(damage*level);

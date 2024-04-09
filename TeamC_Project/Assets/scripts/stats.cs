@@ -18,10 +18,13 @@ public class stats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (current_health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
         
     }
     public void takedamage(int damage){
-        Debug.Log("bruh");
         current_health= current_health - damage;
     }
 }
