@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class enemy_controller : MonoBehaviour
 {
+    [SerializeField] private GameObject sword;
     private SpriteRenderer eSprite;
     private BoxCollider2D BoxCollider;
     private Animator animator;
@@ -91,16 +92,5 @@ public class enemy_controller : MonoBehaviour
                 moveX = +1f;
             }
         }
-    }
-    // kılıcı aktive eder
-    private void onsword(){
-        sword.SetActive(true);
-    }
-    //attack animden çıkar kapar
-    private void offattack(){
-        animator.SetBool("Attacking",false);
-    }
-
-    
-
+    } 
 }
