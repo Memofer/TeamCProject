@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class enemy_controller : MonoBehaviour
 {
-    [SerializeField] private GameObject sword;
     private SpriteRenderer eSprite;
     private BoxCollider2D BoxCollider;
     private Animator animator;
@@ -91,6 +90,13 @@ public class enemy_controller : MonoBehaviour
             {
                 moveX = +1f;
             }
+        }
+    }
+    private void OnCollisionStay2D(Collision2D other) {
+        if (other.gameObject.tag== "enemy")
+        {
+            BoxCollider2D gecicicollider = other.gameObject.GetComponent<BoxCollider2D>();
+            Physics2D.IgnoreCollision(BoxCollider, gecicicollider);
         }
     }
 }

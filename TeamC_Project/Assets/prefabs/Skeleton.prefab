@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 308097060444670731}
   - component: {fileID: 2098354350000995749}
   - component: {fileID: 6540087086746096893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skeleton
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -174,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4139e4f3782274e9f64e99cf361678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sword: {fileID: 0}
   moveSpeed: 10
   Layermask:
     serializedVersion: 2
@@ -229,7 +228,7 @@ GameObject:
   - component: {fileID: 5301892275112109127}
   - component: {fileID: 5927241647223938221}
   - component: {fileID: 5917258642784609185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonSword
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -517,6 +516,10 @@ PrefabInstance:
     - target: {fileID: 9220800651492118104, guid: 1dec3a92942e5d041a41b728fbfa1b62, type: 3}
       propertyPath: m_Name
       value: SkeletonSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220800651492118104, guid: 1dec3a92942e5d041a41b728fbfa1b62, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9220800651492118104, guid: 1dec3a92942e5d041a41b728fbfa1b62, type: 3}
       propertyPath: m_IsActive
