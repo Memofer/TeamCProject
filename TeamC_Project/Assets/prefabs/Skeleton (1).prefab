@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6973896876830636959}
   - component: {fileID: 1671887663404646767}
   - component: {fileID: 7777453006027206764}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skeleton (1)
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -174,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4139e4f3782274e9f64e99cf361678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sword: {fileID: 7770139656992877621}
   moveSpeed: 6
   Layermask:
     serializedVersion: 2
@@ -229,7 +228,7 @@ GameObject:
   - component: {fileID: 955443476864345043}
   - component: {fileID: 8234298623553609025}
   - component: {fileID: 1291629535376219117}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonSword
   m_TagString: enemy
   m_Icon: {fileID: 0}
