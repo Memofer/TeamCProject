@@ -101,4 +101,10 @@ public class main_character : MonoBehaviour
             animator.SetBool("attacking",false);
         }
     }
+    private void offsword(){
+        sword.SetActive(false);
+    }
+    private void offsword2(){
+        sword2.SetActive(false);
+    }
 }

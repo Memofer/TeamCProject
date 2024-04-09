@@ -8,13 +8,10 @@ public class stats : MonoBehaviour
     public int maxmana;
     public int current_health;
     public int current_mana;
-
-
     void Start()
     {
-        
-    }
 
+    }
     // Update is called once per frame
     void Update()
     {
@@ -22,7 +19,6 @@ public class stats : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        
     }
     public void takedamage(int damage){
         current_health= current_health - damage;
