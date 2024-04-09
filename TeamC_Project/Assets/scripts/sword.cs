@@ -22,6 +22,7 @@ public class player_sword : MonoBehaviour
         {
             stats stat = other.GetComponent<stats>();
             stat.takedamage(damage*level);
+            Debug.Log(stat.current_health);
         }
     }
 }

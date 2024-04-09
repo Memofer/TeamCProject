@@ -44,7 +44,7 @@ public class enemy_controller : MonoBehaviour
             if (rayCastHit)
             {
                 interrupted = true;
-                
+                animator.SetBool("Walking", false);
                 animator.SetBool("Attacking", true);               
                 Weapon.gameObject.SetActive(false);
 
@@ -58,10 +58,9 @@ public class enemy_controller : MonoBehaviour
             if (rayCastHit)
             {
                 interrupted = true;
-                
+                animator.SetBool("Walking", false);
                 animator.SetBool("Attacking", true);             
                 Weapon.gameObject.SetActive(false);
-
             }
         }
 
@@ -74,6 +73,7 @@ public class enemy_controller : MonoBehaviour
             rigidBody.velocity = new Vector2(moveDir.x * moveSpeed, rigidBody.velocity.y);
         }
     }
+
     public void EnableWeapon()
     {
         Weapon.gameObject.SetActive(true);
