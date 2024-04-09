@@ -179,6 +179,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   extraDistance: 1
+  sword: {fileID: 7185896660110406177}
 --- !u!95 &2098354350000995749
 Animator:
   serializedVersion: 5
@@ -224,6 +225,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5337186706288711784}
     m_Modifications:
+    - target: {fileID: 6034099290484881281, guid: 1dec3a92942e5d041a41b728fbfa1b62, type: 3}
+      propertyPath: et
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6186724643401553982, guid: 1dec3a92942e5d041a41b728fbfa1b62, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.22
@@ -276,5 +281,10 @@ PrefabInstance:
 --- !u!4 &5301892275112109127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6186724643401553982, guid: 1dec3a92942e5d041a41b728fbfa1b62, type: 3}
+  m_PrefabInstance: {fileID: 2040046682479737977}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7185896660110406177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9220800651492118104, guid: 1dec3a92942e5d041a41b728fbfa1b62, type: 3}
   m_PrefabInstance: {fileID: 2040046682479737977}
   m_PrefabAsset: {fileID: 0}

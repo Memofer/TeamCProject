@@ -78,5 +78,13 @@ public class enemy_controller : MonoBehaviour
             }
             }
     }
+    // kılıcı aktive eder
+    private void onsword(){
+        sword.SetActive(true);
+    }
+    //attack animden çıkar kapar
+    private void offattack(){
+        animator.SetBool("Attacking",false);
+    }
 
 }

@@ -6,6 +6,7 @@ using UnityEngine.Timeline;
 public class main_character : MonoBehaviour
 {
     public GameObject sword;
+    public GameObject sword2;
     private bool jumping;
     [SerializeField]float extraheight = +1f;
     [SerializeField]private LayerMask platformlayermask;
@@ -43,6 +44,7 @@ public class main_character : MonoBehaviour
         moveX=+1f;
         animator.SetBool("running", true);
         sword.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+        sword2.transform.eulerAngles = new Vector3(0f, 0f, 0f);
      }
      if (Input.GetKey(KeyCode.A))
      {
@@ -50,6 +52,7 @@ public class main_character : MonoBehaviour
         moveX=-1f;
         pSprite.flipX=true;
         sword.transform.eulerAngles = new Vector3(0, 180f, 0f);
+        sword2.transform.eulerAngles = new Vector3(0, 180f, 0f);
      }
      if (Input.GetKeyDown(KeyCode.Mouse0))
      {
@@ -88,8 +91,14 @@ public class main_character : MonoBehaviour
             animator.SetBool("attacking",false);
         }
     }
-    private void offsword()
-    {
-        sword.SetActive(false);
+    private void onsword2(){
+        sword2.SetActive(true);
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            animator.SetBool("attacking", true);
+        }
+        else{
+            animator.SetBool("attacking",false);
+        }
     }
 }
