@@ -1074,12 +1074,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sword: {fileID: 1060570123}
   sword2: {fileID: 1077476593}
-  extraheight: 0.5
+  extraheight: 1
   platformlayermask:
     serializedVersion: 2
     m_Bits: 8
   speed: 5
-  jumpforce: 8.29
+  jumpforce: 5
 --- !u!114 &1338912935
 MonoBehaviour:
   m_ObjectHideFlags: 0

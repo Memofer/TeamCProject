@@ -94,11 +94,4 @@ public class main_character : MonoBehaviour
     private void onsword2(){
         sword2.SetActive(true);
     }
-    private void offsword(){
-        sword.SetActive(false);
-    }
-    private void offsword2(){
-        sword2.SetActive(false);
-        animator.SetBool("attacking", false);
-    }
 }
