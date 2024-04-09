@@ -16,13 +16,13 @@ public class player_sword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag != gameObject.tag)
         {
             Stats stat = other.GetComponent<Stats>();
             stat.takedamage(damage*level);
-            Debug.Log(stat.current_health);
         }
     }
 }

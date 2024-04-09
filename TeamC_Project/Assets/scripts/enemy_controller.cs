@@ -92,5 +92,5 @@ public class enemy_controller : MonoBehaviour
                 moveX = +1f;
             }
         }
-    } 
+    }
 }

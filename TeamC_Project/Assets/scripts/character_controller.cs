@@ -93,18 +93,12 @@ public class main_character : MonoBehaviour
     }
     private void onsword2(){
         sword2.SetActive(true);
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            animator.SetBool("attacking", true);
-        }
-        else{
-            animator.SetBool("attacking",false);
-        }
     }
     private void offsword(){
         sword.SetActive(false);
     }
     private void offsword2(){
         sword2.SetActive(false);
+        animator.SetBool("attacking", false);
     }
 }
