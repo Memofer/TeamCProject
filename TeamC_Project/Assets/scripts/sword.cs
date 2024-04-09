@@ -16,12 +16,11 @@ public class player_sword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == et)
         {
-            stats stat = other.GetComponent<stats>();
+            stats stat = other.gameObject.GetComponent<stats>();
             stat.takedamage(damage*level);
         }
     }
