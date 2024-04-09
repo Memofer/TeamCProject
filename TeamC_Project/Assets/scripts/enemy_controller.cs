@@ -16,7 +16,7 @@ public class enemy_controller : MonoBehaviour
     [SerializeField] private LayerMask Layermask;
     [SerializeField] private float extraDistance = 1f;
     private bool interrupted;
-    public GameObject Weapon;
+    [SerializeField] private Transform Weapon;
     
     void Start()
     {
@@ -34,10 +34,10 @@ public class enemy_controller : MonoBehaviour
         RaycastHit2D rayCastHit;
         animator.SetBool("Walking", true);
         animator.SetBool("Attacking", false);
+        
         if (moveX > 0f)
         {
-            Weapon.transform.position = new Vector2(0.22f, 0f);
-            Weapon.transform.rotation = new Quaternion(0f,0f,0f,0f);
+            Weapon.eulerAngles = new Vector3(0f, 0f, 0f);
             eSprite.flipX = false;
             rayCastHit = Physics2D.Raycast(BoxCollider.bounds.center, Vector2.right, BoxCollider.bounds.extents.x + extraDistance,Layermask);
             if (rayCastHit)
@@ -45,12 +45,13 @@ public class enemy_controller : MonoBehaviour
                 animator.SetBool("Walking", false);
                 animator.SetBool("Attacking", true);
                 interrupted = true;
+                Weapon.gameObject.SetActive(false);
+
             }
         }
         else
         {
-            Weapon.transform.position = new Vector2(-0.22f, 0f);
-            Weapon.transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
+            Weapon.eulerAngles = new Vector3(0f, -180f, 0f);
             eSprite .flipX = true;
             rayCastHit = Physics2D.Raycast(BoxCollider.bounds.center, Vector2.left, BoxCollider.bounds.extents.x + extraDistance,Layermask);
             if (rayCastHit)
@@ -58,6 +59,8 @@ public class enemy_controller : MonoBehaviour
                 animator.SetBool("Walking", false);
                 animator.SetBool("Attacking", true);
                 interrupted = true;
+                Weapon.gameObject.SetActive(false);
+
             }
         }
 
@@ -72,7 +75,7 @@ public class enemy_controller : MonoBehaviour
     }
     public void EnableWeapon()
     {
-        Weapon.SetActive(true);
+        Weapon.gameObject.SetActive(true);
         Debug.Log("Working");
     }
     private void OnTriggerEnter2D(Collider2D collision)
